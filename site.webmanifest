@@ -1,0 +1,22 @@
+{
+  "name": "Jamie Ransom Sound",
+  "short_name": "JR Sound",
+  "description": "Production Sound Engineering & Operating.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#151226",
+  "theme_color": "#151226",
+  "icons": [
+    {
+      "src": "assets/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
