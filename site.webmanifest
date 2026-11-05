@@ -1,12 +1,12 @@
 {
   "name": "Jamie Ransom Sound",
   "short_name": "JR Sound",
-  "description": "Production Sound Engineering & Operating.",
+  "description": "Jamie Ransom, freelance sound engineer.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#151226",
-  "theme_color": "#151226",
+  "background_color": "#101A22",
+  "theme_color": "#263E52",
   "icons": [
     {
       "src": "assets/images/icon-192x192.png",
