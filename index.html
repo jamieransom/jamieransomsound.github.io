@@ -49,18 +49,15 @@
       .hero { display: flex; flex: 1; align-items: center; width: min(100%, 1480px); margin-inline: auto; padding: clamp(40px, 7vh, 88px) clamp(28px, 7vw, 110px); }
       .intro { max-width: 660px; }
       .emblem { display: block; width: clamp(140px, 15vw, 200px); height: auto; margin-bottom: 36px; border-radius: 50%; background: white; box-shadow: 0 12px 40px rgb(0 0 0 / 18%); }
-      .eyebrow { margin: 0 0 18px; color: #b2d3af; font-size: 11px; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; }
       h1 { margin: 0; font-family: Poppins, sans-serif; font-size: clamp(40px, 5.2vw, 72px); font-weight: 600; line-height: 1.13; letter-spacing: -.045em; text-wrap: balance; }
       h1 span { display: block; color: #91bfea; }
       .accent { width: 66px; height: 3px; margin-top: 27px; background: var(--sage); border-radius: 2px; }
-      .email-button { display: inline-flex; align-items: center; justify-content: center; gap: 28px; margin-top: 32px; padding: 16px 24px; border: 1px solid transparent; border-radius: 7px; background: var(--blue); color: #071925; font-size: 14px; font-weight: 700; line-height: 1.5; text-decoration: none; transition: background-color .18s ease, transform .18s ease; }
+      .email-button { display: inline-flex; align-items: center; justify-content: center; gap: 28px; margin-top: 32px; padding: 16px 28px; border: 1px solid transparent; border-radius: 999px; background: var(--blue); color: #071925; font-size: 14px; font-weight: 700; line-height: 1.5; text-decoration: none; transition: background-color .18s ease, transform .18s ease; }
       .email-button:hover { background: #8bbbe6; transform: translateY(-2px); }
       .email-button svg { width: 19px; height: 19px; }
       .footer { display: flex; align-items: end; justify-content: space-between; gap: 20px; width: min(100%, 1480px); margin-inline: auto; padding: 24px clamp(28px, 7vw, 110px) 28px; }
       .company { margin: 0; font-size: 12px; font-weight: 600; line-height: 1.8; }
       .registration { display: block; color: #b9c6ce; font-size: 10px; font-weight: 400; }
-      .footer-right { display: flex; align-items: end; gap: 22px; }
-      .photo-credit { color: #c2ccd3; font-size: 9px; line-height: 1.6; text-underline-offset: 3px; }
       .asdp-logo { display: block; flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: white; }
       @media (max-width: 700px) {
         .background { object-position: 60% 50%; }
@@ -68,9 +65,7 @@
         .hero { align-items: start; padding-top: 48px; padding-bottom: 56px; }
         .emblem { width: 150px; margin-bottom: 35px; }
         h1 { font-size: clamp(40px, 8.5vw, 57px); }
-        .eyebrow { font-size: 10px; letter-spacing: .14em; }
         .footer { align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 0; }
-        .footer-right { flex-direction: row-reverse; align-items: center; gap: 14px; }
         .asdp-logo { width: 36px; height: 36px; }
       }
       @media (max-height: 700px) and (min-width: 701px) {
@@ -84,11 +79,10 @@
   </head>
   <body>
     <main class="landing">
-      <img class="background" src="assets/images/theatre-sound.webp" width="2400" height="1600" alt="" fetchpriority="high">
+      <img class="background" src="assets/images/digico-console.webp" width="2400" height="1800" alt="" fetchpriority="high">
       <section class="hero" aria-labelledby="role">
         <div class="intro">
           <img class="emblem" src="assets/images/jrs-logo.svg" width="200" height="200" alt="Jamie Ransom Sound">
-          <p class="eyebrow">Jamie Ransom Sound</p>
           <h1 id="role">Freelance<span>sound engineer.</span></h1>
           <div class="accent" aria-hidden="true"></div>
           <a class="email-button" href="mailto:jamie@jamieransomsound.com">
@@ -99,10 +93,7 @@
       </section>
       <footer class="footer">
         <p class="company">&copy; Jamie Ransom Sound Ltd.<span class="registration">Registered in England and Wales &middot; 07749784</span></p>
-        <div class="footer-right">
-          <a class="photo-credit" href="https://www.pexels.com/photo/sound-engineering-equipment-in-theater-setting-36919657/">Photo: Nadin Nandin / Pexels</a>
-          <img class="asdp-logo" src="assets/images/asdp-logo.png" width="44" height="44" alt="Association for Sound Design and Production">
-        </div>
+        <img class="asdp-logo" src="assets/images/asdp-logo.png" width="44" height="44" alt="Association for Sound Design and Production">
       </footer>
     </main>
   </body>
