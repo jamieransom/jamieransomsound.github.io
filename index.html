@@ -51,14 +51,16 @@
       .emblem { display: block; width: clamp(140px, 15vw, 200px); height: auto; margin-bottom: 36px; border-radius: 50%; background: white; box-shadow: 0 12px 40px rgb(0 0 0 / 18%); }
       h1 { margin: 0; font-family: Poppins, sans-serif; font-size: clamp(40px, 5.2vw, 72px); font-weight: 600; line-height: 1.13; letter-spacing: -.045em; text-wrap: balance; }
       h1 span { display: block; color: var(--sage); }
-      .contact { display: flex; flex-direction: column; width: max-content; max-width: 100%; margin-top: 27px; }
+      .contact-actions { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; width: max-content; max-width: 100%; margin-top: 27px; }
+      .contact { display: flex; flex-direction: column; width: max-content; max-width: 100%; }
       .accent { width: 100%; height: 3px; background: var(--ink); border-radius: 2px; }
-      .email-button { display: inline-flex; align-items: center; justify-content: center; gap: 28px; margin-top: 32px; padding: 16px 28px; border: 1px solid transparent; border-radius: 999px; background: var(--blue); color: #071925; font-size: 14px; font-weight: 700; line-height: 1.5; text-decoration: none; transition: background-color .18s ease, transform .18s ease; }
-      .email-button:hover { background: #8bbbe6; transform: translateY(-2px); }
-      .email-button svg { width: 19px; height: 19px; }
-      .instagram { display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; padding: 8px 0; color: #dbe8f1; font-size: 13px; font-weight: 600; line-height: 1.5; text-decoration: none; }
-      .instagram:hover { color: var(--sage); text-decoration: underline; text-underline-offset: 4px; }
-      .instagram svg { width: 18px; height: 18px; flex-shrink: 0; }
+      .contact-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 14px 20px; border: 1px solid transparent; border-radius: 999px; color: #071925; font-size: 14px; font-weight: 700; line-height: 1.5; text-decoration: none; white-space: nowrap; transition: background-color .18s ease, transform .18s ease; }
+      .contact-button:hover { transform: translateY(-2px); }
+      .contact-button svg { width: 19px; height: 19px; flex-shrink: 0; }
+      .email-button { margin-top: 32px; background: var(--blue); }
+      .email-button:hover { background: #8bbbe6; }
+      .instagram { background: var(--sage); }
+      .instagram:hover { background: #a6cda2; }
       .footer { display: flex; align-items: end; justify-content: space-between; gap: 20px; width: min(100%, 1480px); margin-inline: auto; padding: 24px clamp(28px, 7vw, 110px) 28px; }
       .company { flex: 1; min-width: 0; margin: 0; font-size: 12px; font-weight: 600; line-height: 1.8; }
       .registration { display: block; color: #b9c6ce; font-size: 10px; font-weight: 400; }
@@ -72,13 +74,17 @@
         .footer { align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 0; }
         .asdp-logo { width: 84px; height: 84px; }
       }
+      @media (max-width: 420px) {
+        .contact-button { gap: 8px; padding: 14px 16px; font-size: 13px; }
+        .contact-button svg { width: 18px; height: 18px; }
+      }
       @media (max-height: 700px) and (min-width: 701px) {
         .hero { padding-top: 32px; padding-bottom: 30px; }
         .emblem { width: 130px; margin-bottom: 24px; }
         h1 { font-size: 52px; }
         .email-button { margin-top: 24px; }
       }
-      @media (prefers-reduced-motion: reduce) { .email-button { transition: none; } .email-button:hover { transform: none; } }
+      @media (prefers-reduced-motion: reduce) { .contact-button { transition: none; } .contact-button:hover { transform: none; } }
     </style>
   </head>
   <body>
@@ -88,17 +94,19 @@
         <div class="intro">
           <img class="emblem" src="assets/images/jrs-logo.svg" width="200" height="200" alt="Jamie Ransom Sound">
           <h1 id="role">Freelance<span>sound engineer.</span></h1>
-          <div class="contact">
-            <div class="accent" aria-hidden="true"></div>
-            <a class="email-button" href="mailto:jamie@jamieransomsound.com">
-              Get in touch
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M4 6h16v12H4zM4 6l8 7 8-7"/></svg>
+          <div class="contact-actions">
+            <div class="contact">
+              <div class="accent" aria-hidden="true"></div>
+              <a class="contact-button email-button" href="mailto:jamie@jamieransomsound.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M4 6h16v12H4zM4 6l8 7 8-7"/></svg>
+                Get in touch
+              </a>
+            </div>
+            <a class="contact-button instagram" href="https://www.instagram.com/jamieransom/" aria-label="Instagram: @jamieransom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              @jamieransom
             </a>
           </div>
-          <a class="instagram" href="https://www.instagram.com/jamieransom/" aria-label="Instagram: @jamieransom">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-            @jamieransom
-          </a>
         </div>
       </section>
       <footer class="footer">
